@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EcoPath – Join Us | Impact & Awareness</title>
+  <meta name="description"
+    content="Join EcoPath to take real climate action. Explore our journey, facts, voices, success stories, ways to help, and future goals—all in one modern, content-rich page." />
+  <meta name="keywords"
+    content="EcoPath join us, environmental awareness, sustainability, climate action, zero waste, tree plantation, eco education, plastic reduction, community green projects" />
+  <link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Floating Object Animation */
+    .floating {
+      position: relative;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translatey(0);
+      }
+
+      50% {
+        transform: translatey(-10px);
+      }
+
+      100% {
+        transform: translatey(0);
+      }
+    }
+
+    /* Hover Effect */
+    .hover-effect:hover {
+      transform: scale(1.05);
+
+    }
+  </style>
+!-- Navbar section -->
+  <header>
+
+    <nav
+      class="z-50 fixed top-2 left-2 right-2 w-[calc(100%-16px)] h-[70px] bg-gradient-to-r from-[#d9f5e5] via-[#b7e4c7] to-[#f7f7e8] rounded-2xl shadow-[0_4px_20px_-2px_rgba(24,46,22,0.3)] flex justify-between items-center transition-all duration-700 ease-in-out animate-fade-in-down px-4 md:px-10">
+
+      <!-- Logo -->
+      <div class="logo flex items-center gap-2 font-poppins text-xl md:text-2xl lg:text-3xl font-bold text-white">
+        <img class="h-8 w-8" src="./favicon.png" alt="">
+        <div class="text-[#3e7e46]">EcoPath</div>
+      </div>
+
+      <!-- Hamburger Icon -->
+      <button id="menu-toggle"
+        class="md:hidden flex items-center px-3 py-2 rounded-2xl border border-[#b7e4c7] bg-white shadow font-poppins"
+        aria-label="Open Menu">
+        <svg class="h-8 w-8 text-[#3d3d3d]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <!-- Nav Links -->
+      <ul id="nav-links" class="hidden md:flex gap-6 lg:gap-10 pr-4 md:pr-4 list-none">
+        <li><a href="./index.php"
+            class="text-[#3d3d3d] font-poppins text-lg lg:text-xl no-underline transition-colors duration-300 hover:text-[#3e7e46]">Home</a>
+        </li>
+        <li><a href="./eco awareness.html"
+            class="text-[#3d3d3d] font-poppins text-lg lg:text-xl no-underline transition-colors duration-300 hover:text-[#3e7e46]">EcoAwareness</a>
+        </li>
+        <li><a href="greenstep.php"
+            class="text-[#3d3d3d] font-poppins text-lg lg:text-xl no-underline transition-colors duration-300 hover:text-[#3e7e46]">GreenSteps</a>
+        </li>
+        <li><a href="./join  now.html"
+            class="text-[#3d3d3d] font-poppins text-lg lg:text-xl no-underline transition-colors duration-300 hover:text-[#3e7e46]">Join
+            Us</a></li>
+
+        <!-- logout toggle -->
+        <?php if (isset($_SESSION['user_id'])): ?>
+          <!-- ✅ Jab user login ho -->
+          <!-- <li><a href="dashboard.php">Dashboard</a></li> -->
+          <li><a href="logout.php"
+              class="text-[#3d3d3d] font-poppins font-bold text-lg lg:text-xl no-underline transition-colors duration-300 hover:text-white">Logout</a>
+          </li>
+        <?php else: ?>
+          <!-- ✅ Jab user login NA ho -->
+          <li><a href="./signup.html"
+              class="text-[#3d3d3d] font-poppins font-bold text-lg lg:text-xl no-underline transition-colors duration-300 hover:text-white">Signup
+            </a></li>
+          <li><a href="./signIn.html"
+              class="text-[#3d3d3d] font-poppins font-bold text-lg lg:text-xl no-underline transition-colors duration-300 hover:text-white">SignIn
+            </a></li> <?php endif; ?>
+
+      </ul>
+
+    </nav>
+
+    <!-- Nav Animation -->
+    <style>
+      @keyframes fade-in-down {
+        0% {
+          opacity: 0;
+          transform: translateY(-40px);
+        }
+
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fade-in-down {
+        animation: fade-in-down 1s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+    </style>
+
+  </header>
+
+
+  <!-- ===== Hero ===== -->
+  <section class="mt-[100px] mx-2 rounded-3xl shadow-lg overflow-hidden">
+    <div class="relative bg-gradient-to-b from-[#F7FFF8] to-[#E8F6EA] py-20 text-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-[#22543d] tracking-tight">Join Us – Impact & Awareness</h1>
+      <p class="mt-4 text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">“See the Change. Be the Change.” EcoPath brings
+        people together to plant trees, reduce plastic, and build a culture of sustainability across campuses and
+        communities.</p>
+      <div class="mt-8 flex justify-center gap-4">
+        <a href="#how-help"
+          class="px-6 py-3 rounded-xl bg-white text-[#2f855a] font-semibold border border-[#b7e4c7] hover:shadow-md transition">Ways
+          to Help</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Timeline ===== -->
+  <section id="timeline" class="container mx-auto px-6 py-20">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-[#2f855a] mb-12">Our Green Journey: A Timeline of Change
+    </h2>
+    <div class="max-w-3xl mx-auto space-y-10 relative border-l-4 border-[#b7e4c7] pl-6">
+      <div>
+        <h3 class="font-semibold text-xl text-[#22543d]">2019</h3>
+        <p class="text-gray-700">Local tree plantation campaign began.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-xl text-[#22543d]">2020</h3>
+        <p class="text-gray-700">15% reduction in plastic waste in the area.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-xl text-[#22543d]">2021</h3>
+        <p class="text-gray-700">Neighborhood clean-ups introduced; composting workshops piloted.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-xl text-[#22543d]">2022</h3>
+        <p class="text-gray-700">Awareness drives reached over 10,000 students.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-xl text-[#22543d]">2023</h3>
+        <p class="text-gray-700">Campus “Refill & Reuse” water stations set up with local support.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-xl text-[#22543d]">2024</h3>
+        <p class="text-gray-700">Green clubs formed in multiple schools; monthly eco-challenges launched.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-xl text-[#22543d]">2025</h3>
+        <p class="text-gray-700">Zero‑Waste lifestyle challenge introduced community-wide.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-xl text-[#22543d]">2026 & Beyond</h3>
+        <p class="text-gray-700">Scale tree canopy projects, expand clean-water awareness, and train youth climate
+          leaders.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Eco Facts ===== -->
+  <section id="facts" class="py-20 bg-gradient-to-br from-[#f7f7e8] to-[#f0fdf4]">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-[#2f855a] mb-12">Environmental Facts You Should Know
+      </h2>
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div class="p-6 rounded-2xl shadow-lg bg-white hover:translate-y-[-4px] transition">
+          <p>Over <b>1 million plastic bottles</b> are bought every minute worldwide.</p>
+        </div>
+        <div class="p-6 rounded-2xl shadow-lg bg-white hover:translate-y-[-4px] transition">
+          <p>One tree absorbs <b>22 kg of CO₂</b> per year and provides oxygen for two people.</p>
+        </div>
+        <div class="p-6 rounded-2xl shadow-lg bg-white hover:translate-y-[-4px] transition">
+          <p>Globally, <b>1 in 3 people</b> lack access to safe drinking water.</p>
+        </div>
+        <div class="p-6 rounded-2xl shadow-lg bg-white hover:translate-y-[-4px] transition">
+          <p>Over <b>100,000 marine animals</b> die annually due to plastic pollution.</p>
+        </div>
+        <div class="p-6 rounded-2xl shadow-lg bg-white hover:translate-y-[-4px] transition">
+          <p>Food waste generates about <b>8–10%</b> of global greenhouse gas emissions.</p>
+        </div>
+        <div class="p-6 rounded-2xl shadow-lg bg-white hover:translate-y-[-4px] transition">
+          <p>Switching to LEDs can cut lighting energy use by <b>50–70%</b>.</p>
+        </div>
+        <div class="p-6 rounded-2xl shadow-lg bg-white hover:translate-y-[-4px] transition">
+          <p>City trees can reduce neighborhood temperatures by up to <b>2°C</b>.</p>
+        </div>
+        <div class="p-6 rounded-2xl shadow-lg bg-white hover:translate-y-[-4px] transition">
+          <p>Reusable bottles can save <b>1000+</b> single-use bottles per person over time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Voices ===== -->
+  <section id="voices" class="container mx-auto px-6 py-20">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-[#22543d] mb-12">Real Voices for the Planet</h2>
+    <div class="grid gap-8 md:grid-cols-3">
+      <div class="p-6 bg-gradient-to-br from-[#e6f9ef] to-[#f9fdfb] rounded-2xl shadow-lg hover:shadow-2xl transition">
+        <p class="italic">“After attending one eco session, I started carrying my reusable bottle everywhere. It feels
+          powerful.”</p>
+        <p class="mt-4 font-semibold">— Aamna, Student</p>
+      </div>
+      <div class="p-6 bg-gradient-to-br from-[#e6f9ef] to-[#f9fdfb] rounded-2xl shadow-lg hover:shadow-2xl transition">
+        <p class="italic">“Plastic-free campaigns helped reduce our school's trash by 60%.”</p>
+        <p class="mt-4 font-semibold">— Mr. Rehman, Teacher</p>
+      </div>
+      <div class="p-6 bg-gradient-to-br from-[#e6f9ef] to-[#f9fdfb] rounded-2xl shadow-lg hover:shadow-2xl transition">
+        <p class="italic">“Knowing my kids will live in a cleaner world makes every effort worth it.”</p>
+        <p class="mt-4 font-semibold">— Sana, Eco-Volunteer</p>
+      </div>
+      <div class="p-6 bg-gradient-to-br from-[#e6f9ef] to-[#f9fdfb] rounded-2xl shadow-lg hover:shadow-2xl transition">
+        <p class="italic">“Composting sessions changed how our family manages kitchen waste.”</p>
+        <p class="mt-4 font-semibold">— Hamza, Parent</p>
+      </div>
+      <div class="p-6 bg-gradient-to-br from-[#e6f9ef] to-[#f9fdfb] rounded-2xl shadow-lg hover:shadow-2xl transition">
+        <p class="italic">“The refill stations on campus cut our plastic bottle use dramatically.”</p>
+        <p class="mt-4 font-semibold">— Sara, Society Lead</p>
+      </div>
+      <div class="p-6 bg-gradient-to-br from-[#e6f9ef] to-[#f9fdfb] rounded-2xl shadow-lg hover:shadow-2xl transition">
+        <p class="italic">“Monthly eco‑challenges keep our club engaged and consistent.”</p>
+        <p class="mt-4 font-semibold">— Bilal, Green Club</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Impact Counters ===== -->
+  <section class="py-20 mr-4 ml-4 rounded-xl shadow-xl bg-gradient-to-r from-[#edf7ed] to-[#f8fafc]">
+    <div class="container mx-auto px-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
+      <div>
+        <h3 class="text-4xl font-bold text-[#22543d]">10k+</h3>
+        <p class="text-gray-600">Students Reached</p>
+      </div>
+      <div>
+        <h3 class="text-4xl font-bold text-[#22543d]">15%</h3>
+        <p class="text-gray-600">Plastic Waste Reduced</p>
+      </div>
+      <div>
+        <h3 class="text-4xl font-bold text-[#22543d]">5000+</h3>
+        <p class="text-gray-600">Trees Planted</p>
+      </div>
+      <div>
+        <h3 class="text-4xl font-bold text-[#22543d]">100+</h3>
+        <p class="text-gray-600">Community Projects</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Why Join (Attraction) ===== -->
+  <section id="why-join" class="container mx-auto px-6 py-20">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-[#22543d] mb-12">Why People Join EcoPath</h2>
+    <div class="grid gap-8 md:grid-cols-3">
+      <div class="p-6 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition">
+        <h3 class="font-semibold text-xl mb-2 text-[#2f855a]">Real Impact</h3>
+        <p class="text-gray-600">From tree planting to plastic audits, your actions contribute to visible, measurable
+          change in your area.</p>
+      </div>
+      <div class="p-6 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition">
+        <h3 class="font-semibold text-xl mb-2 text-[#2f855a]">Community & Leadership</h3>
+        <p class="text-gray-600">Collaborate with a supportive network and grow as a leader through monthly
+          eco‑challenges and events.</p>
+      </div>
+      <div class="p-6 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition">
+        <h3 class="font-semibold text-xl mb-2 text-[#2f855a]">Skill Building</h3>
+        <p class="text-gray-600">Learn practical skills: composting, clean‑up coordination, water conservation, and
+          advocacy.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Success Stories (NEW) ===== -->
+  <section id="success" class="py-20 bg-gradient-to-b from-white to-[#f5fbf7]">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-[#2f855a] mb-12">Success Stories</h2>
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <article class="p-6 bg-white rounded-2xl shadow-lg hover:translate-y-[-4px] transition">
+          <h3 class="text-xl font-semibold text-[#22543d]">A School Goes Plastic‑Light</h3>
+          <p class="mt-2 text-gray-700">EcoPath volunteers led a week-long bottle audit and introduced refill
+            habits—single‑use bottles dropped significantly in one term.</p>
+        </article>
+        <article class="p-6 bg-white rounded-2xl shadow-lg hover:translate-y-[-4px] transition">
+          <h3 class="text-xl font-semibold text-[#22543d]">Neighborhood Composting Hub</h3>
+          <p class="mt-2 text-gray-700">Families learned bin‑composting basics and now divert kitchen waste into
+            nutrient‑rich compost for community plants.</p>
+        </article>
+        <article class="p-6 bg-white rounded-2xl shadow-lg hover:translate-y-[-4px] transition">
+          <h3 class="text-xl font-semibold text-[#22543d]">Green Club Revival</h3>
+          <p class="mt-2 text-gray-700">Monthly eco‑challenges kept members engaged—clean‑ups, tree care days, and
+            awareness booths boosted campus participation.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== How You Can Help (NEW) ===== -->
+  <section id="how-help" class="container mx-auto px-6 py-20">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-[#22543d] mb-12">How You Can Help</h2>
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div class="p-6 rounded-2xl border border-[#e3f3ea] hover:shadow-md transition">
+        <h3 class="font-semibold text-lg text-[#2f855a]">Volunteer on Ground</h3>
+        <ul class="mt-2 list-disc list-inside text-gray-700 space-y-1">
+          <li>Tree care & plantation support</li>
+          <li>Neighborhood clean‑ups</li>
+          <li>Awareness booth facilitation</li>
+        </ul>
+      </div>
+      <div class="p-6 rounded-2xl border border-[#e3f3ea] hover:shadow-md transition">
+        <h3 class="font-semibold text-lg text-[#2f855a]">Lead a Micro‑Project</h3>
+        <ul class="mt-2 list-disc list-inside text-gray-700 space-y-1">
+          <li>Plastic‑free school drive</li>
+          <li>Refill & Reuse campaign</li>
+          <li>Composting at home workshop</li>
+        </ul>
+      </div>
+      <div class="p-6 rounded-2xl border border-[#e3f3ea] hover:shadow-md transition">
+        <h3 class="font-semibold text-lg text-[#2f855a]">Spread the Word</h3>
+        <ul class="mt-2 list-disc list-inside text-gray-700 space-y-1">
+          <li>Share eco tips & success stories</li>
+          <li>Invite friends to monthly challenges</li>
+          <li>Document impact with photos & notes</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Mission & Future Goals (NEW) ===== -->
+  <section id="mission" class="py-20 bg-gradient-to-tr from-[#f7fff8] to-[#edf7ed]">
+    <div class="container mx-auto px-6 max-w-5xl">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-[#2f855a] mb-8">Our Mission & Future Goals</h2>
+      <p class="text-gray-700 text-center max-w-3xl mx-auto">EcoPath exists to build everyday eco‑habits that
+        last—through education, community action, and youth leadership.</p>
+      <div class="mt-8 grid gap-6 md:grid-cols-2">
+        <div class="p-6 bg-white rounded-2xl shadow">
+          <h3 class="font-semibold text-lg text-[#22543d]">Mission Focus</h3>
+          <ul class="mt-2 list-disc list-inside text-gray-700 space-y-1">
+            <li>Reduce single‑use plastics via refill habits</li>
+            <li>Grow urban tree canopy and tree care</li>
+            <li>Promote composting and waste segregation</li>
+            <li>Enable student‑led climate initiatives</li>
+          </ul>
+        </div>
+        <div class="p-6 bg-white rounded-2xl shadow">
+          <h3 class="font-semibold text-lg text-[#22543d]">Goals 2026–2030</h3>
+          <ul class="mt-2 list-disc list-inside text-gray-700 space-y-1">
+            <li>Set up more refill stations in campuses</li>
+            <li>Annual inter‑school eco‑challenges</li>
+            <li>Neighborhood composting in every district</li>
+            <li>Train 1,000+ youth eco‑ambassadors</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQs (NEW) ===== -->
+  <section id="faqs" class="container mx-auto px-6 py-20">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-[#22543d] mb-12">FAQs</h2>
+    <div class="max-w-3xl mx-auto space-y-6">
+      <div class="p-5 rounded-2xl border border-[#e3f3ea]">
+        <h3 class="font-semibold text-lg text-[#2f855a]">Who can join EcoPath?</h3>
+        <p class="text-gray-700 mt-1">Students, teachers, parents, and anyone who wants to build practical eco‑habits
+          and lead community action.</p>
+      </div>
+      <div class="p-5 rounded-2xl border border-[#e3f3ea]">
+        <h3 class="font-semibold text-lg text-[#2f855a]">Is there any fee to participate?</h3>
+        <p class="text-gray-700 mt-1">No mandatory fees. Most activities are volunteer‑driven and community‑supported.
+        </p>
+      </div>
+      <div class="p-5 rounded-2xl border border-[#e3f3ea]">
+        <h3 class="font-semibold text-lg text-[#2f855a]">How do I start a micro‑project?</h3>
+        <p class="text-gray-700 mt-1">Pick an idea from “How You Can Help” and email us with your plan. We’ll share
+          simple guides and checklists.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Join Us CTA (kept) ===== -->
+  <section id="join" class="text-center py-20 mx-2 rounded-3xl shadow-lg bg-gradient-to-b from-[#f7fff8] to-[#e8f6ea]">
+    <h2 class="text-3xl md:text-4xl font-bold text-[#2f855a] mb-6">Be the Change – Join Us</h2>
+    <p class="max-w-2xl mx-auto text-gray-700 mb-8">Whether it’s planting trees, reducing waste, or leading
+      awareness—every step counts. Together, we can build a cleaner, greener tomorrow.</p>
+    <a href="./joinus form.php"
+      class="px-8 py-4 bg-[#2f855a] text-white font-semibold rounded-xl shadow-md hover:bg-[#276749] transition">Join
+      Now</a>
+  </section>
+
+  <!-- ===== Footer (unchanged) ===== -->
+  <footer class="text-gray-600 body-font bg-[#f7f7e8] mt-8">
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+        <img src="./favicon.png" alt="EcoPath Logo" class="w-10 h-10 p-2  rounded-full" />
+        <span class="ml-3 text-xl">EcoPath</span>
+      </a>
+      <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2025
+        EcoPath —
+        <a href="EcoPath2025@gmail.com" class="text-gray-600 ml-1" rel="noopener noreferrer"
+          target="_blank">EcoPath2025@gmail.com</a>
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <a class="text-gray-500" target="_blank">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+            viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500" href="https://x.com/Ecopath2025" target="_blank">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+            viewBox="0 0 24 24">
+            <path
+              d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+            </path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500" href="https://www.instagram.com/ecopath2025/" target="_blank">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500" target="_blank" href="www.linkedin.com/in/ecopath2025
+
+">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0"
+            class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none"
+              d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500" href="https://youtube.com/@ecopath2025?si=BjshOUmre0S4X0ZX" target="_blank"
+          rel="noopener">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0"
+            class="w-5 h-5" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29.94 29.94 0 001 12c0 2 .16 3.73.46 5.58a2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96C22.84 15.73 23 14 23 12s-.16-3.73-.46-5.58zM10 15V9l5 3-5 3z">
+            </path>
+          </svg>
+        </a>
+
+      </span>
+    </div>
+  </footer>
+
+  </body>
+
+</html>
